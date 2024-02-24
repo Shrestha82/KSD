@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% block title %}List{% endblock  %}
+{% block content %}
+    <div id="list-wrapper">
+        <h5>{{ls.name}}</h5>
+        {% for item in ls.item_set.all %} {% comment %} call the another table using foriegn key {% endcomment %}
+            <ul>
+                {% if item.complete == False %}
+                    <li>{{item.text}} - Incomplete</li>
+                {% else %}
+                    <li>{{item.text}} - Complete</li>
+                {% endif %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock  %}

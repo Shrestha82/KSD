@@ -1,0 +1,104 @@
+{% extends "main/base.html" %}
+{% block title %}Contact US{% endblock  %}
+{% block content %}
+<div id="contactus-wrapper">
+    <div class="contact-page-title page-title">
+        <h1>CONTACT US</h1>
+        <p>Do you have a question? Contact us immediately!</p>
+    </div>
+    <div class="content-page-content-wrapper">
+        <div class="container">
+            <section class="contactus-details-wrapper">
+                <h2 class="contactus-details-title ksd-title" data-aos="fade-up">
+                    How can we assist you?
+                </h2>
+                <div class="row">
+                    <div class="contactus-details-individual col-md-4" data-aos="fade-right">
+                        <i class="fa fa-phone "></i>
+                        <h5 class="contactus-details-individual-title">
+                            Call Now
+                        </h5>
+                        <p class="contactus-details-individual-text">
+                            +41 7818666374
+                        </p>
+                    </div>
+                    <div class="contactus-details-individual col-md-4" data-aos="fade-up">
+                        <i class="fa fa-location-arrow"></i>
+                        <h5 class="contactus-details-individual-title">
+                            Find Us
+                        </h5>
+                        <p class="contactus-details-individual-text">
+                            100 Willow Lane, <br> SE18 5TQ, London, UK
+                        </p>
+                    </div>
+                    <div class="contactus-details-individual col-md-4" data-aos="fade-left">
+                        <i class="fa fa-envelope"></i>
+                        <h5 class="contactus-details-individual-title">
+                            Mail Us
+                        </h5>
+                        <p class="contactus-details-individual-text">
+                            contact@ksd.com
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="contactus-enquiry-wrapper">
+                <h2 class="contactus-enqury-title ksd-title" data-aos="fade-up">
+                    STILL NEED A HELPING HAND?
+                </h2>
+                <p class="contactus-enqury-sub-title" data-aos="fade-up">
+                    We aim to respond to your emails and inquiries within three business days. Please check your spam or junk folders if you haven't heard back from us. Simply complete the form below and leave your problems to us!
+                </p>
+                <div class="contactus-enqury-details" data-aos="fade-up">
+                    <div class="row">
+                        <div class="contactus-enqury-map col-md-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19876.569000627947!2d0.03839824932968523!3d51.48438609568904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a8eeff639055%3A0x7e8bb896b2ea3023!2sWoolwich%2C%20London!5e0!3m2!1sen!2suk!4v1708352873679!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contactus-enqury-form-wrapper col-md-6">
+                            <form action="contact" method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" required class="name form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" required name="email" class="email form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" required class="phone form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" required class="subject form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Your Message</label>
+                                    <textarea id="message" name="message" class="message form-control" cols="30" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-danger">Submit Your Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        {% if messages %}
+                            {% for message in messages  %}
+                                {% if message %}
+                                    <div class="alert alert-success">
+                                        <span>{{message}}</span>
+                                    </div>
+                                {% elif not message %}
+                                    <div class="alert alert-danger">
+                                        <span>{{message}}</span>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock  %}

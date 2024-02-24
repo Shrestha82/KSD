@@ -1,0 +1,64 @@
+{% extends "main/base.html" %}
+{% block title %}About Us{% endblock  %}
+{% block content %}
+{% load static %}
+    <div id="aboutus-page-wrapper">
+        <div class="about-page-title page-title">
+            <h1>ABOUT US</h1>
+            <span>Empowering Kidney Health: Innovating through Machine Learning <br> for Early Detection and Proactive Wellness</span>
+        </div>
+        <div class="aboutus-page-content-wrapper">
+            <div class="container">
+                <section class="who-we-are-wrapper">
+                    <h2 class="ksd-title" data-aos="fade-up">
+                        Who We Are?
+                    </h2>
+                    <p data-aos="fade-up">
+                        At KSD, we are pioneers in the intersection of healthcare and technology, driven by a passion for transforming kidney health. Our dedicated team comprises experts in machine learning, data science, and healthcare professionals who share a common vision: to empower individuals through advanced technology for the early detection of kidney stones. Committed to user-centric innovation, we've crafted a user-friendly web application that harnesses the power of machine learning algorithms, providing personalized insights and fostering proactive well-being. Our mission is to revolutionize kidney care, making it accessible, understandable, and actionable for everyone. Welcome to a journey where cutting-edge technology meets compassionate healthcare, dedicated to ensuring your kidneys stay healthy and thriving.
+                    </p>
+                </section>
+                <section class="why-believe-us-wrapper">
+                    <h2 class="ksd-title" data-aos="fade-up">
+                        Why Do You Believe Us?
+                    </h2>
+                    <p data-aos="fade-up">
+                        In the realm of kidney health, trust is paramount, and at KSD, we take pride in the credibility that sets us apart. Backed by a team of seasoned professionals in the fields of machine learning, healthcare, and technology, our web application is founded on rigorous research and expertise. We believe in transparency, ensuring that our users understand the science behind our early detection algorithms. With a commitment to continuous improvement, our platform evolves with the latest advancements in medical research. Your trust is earned through our dedication to accuracy, innovation, and a shared commitment to prioritizing your kidney health. Choose KSD for a reliable partner in your proactive well-being journey.
+                    </p>
+                </section>
+                <section class="our-success-wrapper">
+                    <h2 class="ksd-title" data-aos="fade-up">
+                        People Who Are Responsible For Our Success
+                    </h2>
+                    <p data-aos="fade-up">
+                        At the heart of our success lies a diverse team of dedicated individuals, each contributing their unique expertise to propel our mission forward. Our problem development specialists meticulously analyze the intricacies of kidney health, identifying challenges and opportunities for innovation. Supported by skilled machine learning experts, we harness the power of advanced algorithms to revolutionize early detection methods, ensuring precision and reliability in our approach. Our web application development team brings these visions to life, crafting intuitive interfaces and seamless user experiences that prioritize accessibility and effectiveness.
+                    </p>
+                    <p data-aos="fade-up">
+                        Behind the scenes, our data and content research experts work tirelessly to ensure that our platform remains grounded in the latest medical research and insights. Their dedication to thorough investigation and continuous learning ensures that our users receive the most accurate and up-to-date information available. Together, these individuals form the backbone of our success, embodying our shared commitment to empowering individuals to take control of their kidney health. As we continue to innovate and grow, we remain grateful for the passion, expertise, and unwavering dedication of each member of our team.
+                    </p>
+                    <div class="team-details-wrapper">
+                        <div class="row">
+                            <div class="team-details-individual col-md-4" data-aos="fade-right">
+                                <img src="{% static "images/team1.jpg" %}" width="100%" alt="">
+                                <h4>Sumin Regmi</h4>
+                                <p>Content Writer</p>
+                                <span><i>MSc Computer Science</i></span>
+                            </div>
+                            <div class="team-details-individual col-md-4" data-aos="fade-up">
+                                <img src="{% static "images/team2.jpg" %}" width="100%" alt="">
+                                <h4>Suraj Shrestha</h4>
+                                <p>Web App Developer/Data Analyst</p>
+                                <span><i>BE/MSc Computer Science</i></span>
+                            </div>
+                            <div class="team-details-individual col-md-4" data-aos="fade-left">
+                                <img src="{% static "images/team3.jpg" %}" width="100%" alt="">
+                                <h4>Arjun Shrestha</h4>
+                                <p>Problem Development Specialist</p>
+                                <span><i>MSc in Healthcare</i></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock  %}

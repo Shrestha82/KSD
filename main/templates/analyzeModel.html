@@ -1,0 +1,77 @@
+{% extends "main/base.html" %}
+{% block title %}Analyze KSD Record{% endblock  %}
+{% block content %}
+{% load static %}
+    <div id="analyze-model-page-wrapper">
+        <div class="page-title">
+            <h1>Analyze Kidney Sotne Records</h1>
+            <span class="page-subtitle">
+                Extracting Invaluable Kidney Health Insights from <br> Patient Urine Records with Machine Learning
+            </span>
+        </div>
+        <div class="analyze-model-wrapper">
+            <div class="container">
+                <section class="urine-record-analyze-wapper">
+                    <h2 class="urine-record-analyze-record ksd-title" data-aos="fade-up">
+                        Urine Records Analyze For KSD
+                    </h2>
+                    <p data-aos="fade-up">
+                        Welcome to our Urine Records Analysis feature for Kidney Stone Detection (KSD). Here, we leverage the power of cutting-edge Machine Learning to meticulously examine patient urine records, scrutinizing crucial factors such as <b> gravity, pH value, osmolality, conductivity, urea concentration, and calcium levels</b>. Our advanced algorithms delve deep into these key indicators, providing detailed insights into kidney stone patterns. Trust in precision, trust in proactive healthcare – unravel the potential for early detection and personalized care with our Urine Records Analyze for KSD. 
+                    </p>
+                    <div class="urine-analyze-record-form" data-aos="fade-up">
+                        <div class="predict-result">
+                            {% if result == "Detected" %}
+                                <div class="alert alert-danger">
+                                    <span>I'm sorry to hear that kidney stones have been <b>{{result}}</b>. 
+                                        Please know that you're not alone, and there are effective treatments available. 
+                                        Reach out to your healthcare provider to discuss the next steps. Take care, and we're 
+                                        here to support you through this.</span>
+                                </div>
+                            {% elif result == "No Detection" %}
+                                    <div class="alert alert-success">
+                                        <span>Great news! The tests show <b>{{result}}</b> of kidney stones. 
+                                            It's always a relief to receive good health news. Remember to maintain a healthy lifestyle,
+                                             stay hydrated, and consult with your healthcare provider for any concerns. 
+                                             Celebrate the positive results!</span>
+                                    </div>
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            <form action="" method="POST" class="col-md-6">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                   <label for="gravity">Gravity</label>
+                                   <input type="text" name="gravity" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                   <label for="ph">pH Value</label>
+                                   <input type="text" name="ph" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                   <label for="osmolality">Osmolality</label>
+                                   <input type="text" name="osmolality" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                   <label for="conductivity">Conductivity</label>
+                                   <input type="text" name="conductivity" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                   <label for="urea">Urea Concentration</label>
+                                   <input type="text" name="urea" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                   <label for="calcium">Calcium</label>
+                                   <input type="text" name="calcium" required class="form-control">
+                                </div>
+                                <button class="btn btn-primary" type="submit">Check for Presence of Kidney Stone</button>
+                           </form>
+                           <div class="urine-analyze-record-image col-md-6">
+                                <img src="{% static "images/ksd_analyze.jpg" %}" width="100%" alt="">
+                           </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock  %}

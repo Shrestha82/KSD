@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block title %}Create{% endblock  %}
+{% block content %}
+    <div id="create-wrapper">
+        <form action="create" method="POST">
+            {% csrf_token %}
+            {{form.as_p}} 
+            {% comment %} .as_ul, .as_table {% endcomment %}
+            <button type="submit" name="save">Create New</button>
+        </form>
+    </div>
+{% endblock  %}

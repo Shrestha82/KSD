@@ -1,0 +1,157 @@
+{% extends "main/base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+   <div id="home-wrapper">
+        <div class="container">
+            <section id="home-header-wrapper">
+               <div class="row">
+                  <div id="home-banner-wrapper" class="col-md-9">
+                     <img class="home-banner-image" src="{% static "images/ksd_banner.png" %}" width="100%" alt="" srcset="">
+                     <img  class="home-banner-image" src="{% static "images/ksd_banner_second.png" %}" width="100%" alt="" srcset="">
+                  </div>
+                  <div class="ksd-analyze-wrapper col-md-3">
+                     <div class="analyze-banner">
+                        <img src="{% static "images/analyze_banner.jpg" %}" width="100%" alt="">
+                     </div>
+                     <div class="ksd-analyze-content">
+                        <p class="ksd-analyze-text" data-aos="fade-down">
+                           "Precision in Every Detail: Elevate your kidney health with our Machine Learning-driven platform. Analyzing gravity, pH, osmolality, conductivity, urea, and calcium levels for advanced early detection and personalized care."
+                        </p>
+                        <button class="primary-button" id="ksd-analyze-button" data-aos="fade-down">
+                           <a href="{{"analyze"}}">Analyze Your Record</a>
+                        </button>
+                     </div>
+                     
+                  </div>
+               </div>
+            </section>
+            <section class="ksd-formation-wrapper">
+               <h1 class="ksd-formation-headding ksd-title" data-aos="fade-up">Formation of Kidney Stones</h1>
+               <div class="ksd-formation-content-wrapper row">
+                  <div class="ksd-formarion-content col-md-8" data-aos="fade-right">
+                     <p>In recent medical research, the formation of kidney stones has been attributed to a complex interplay of factors. Studies indicate that imbalances in urinary parameters, such as high concentrations of calcium, oxalate, and phosphate, contribute to the crystallization process within the kidneys. Additionally, variations in urine pH levels influence the solubility of these minerals, impacting their propensity to form stones. Dehydration, dietary habits, and genetic predispositions further contribute to the formation of kidney stones. Advanced research explores the intricate relationship between these factors, shedding light on the molecular mechanisms that underlie stone formation. This evolving understanding not only enhances early detection strategies but also guides the development of targeted interventions for preventing the recurrence of kidney stones.</p>
+                  </div>
+                  <div class="ksd-formarion-content-img col-md-4" data-aos="fade-left">
+                     <img src="{% static "images/ksd.jpg" %}" alt="" srcset="">
+                  </div>
+               </div>
+            </section>
+            <section class="ksd-researcher-point-wrapper">
+               <h2 class="ksd-researcher-point-title ksd-title" data-aos="fade-up">
+                  Researchers' Point of View for KSD
+               </h2>
+               <div class="container">
+                  <div class="ksd-researcher-point" data-aos="fade-up">
+                     <div class="ksd-researcher-point-individual">
+                        <div class="row">
+                           <div class="ksd-researcher-point-text col-md-8">
+                              <p>
+                                 A leading urologist, underscores the importance of metabolic evaluations in kidney stone patients. His perspective revolves around identifying underlying metabolic causes, allowing for targeted interventions to prevent stone recurrence. He advocates for comprehensive assessments that go beyond immediate symptom management, aiming for a holistic understanding of the patient's metabolic profile.
+                              </p>
+                           </div>
+                           <div class="ksd-researcher-details col-md-3">
+                              <img src="{% static "images/ksd_researcher_1.jpg" %}" alt="" srcset="">
+                              <p>Dr. Marshall L. Stoller</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ksd-researcher-point-individual">
+                        <div class="row">
+                           <div class="ksd-researcher-point-text col-md-8">
+                              <p>
+                                 A distinguished nephrologist, focuses on the impact of dietary choices in kidney stone prevention. Her research emphasizes the crucial role of increased fluid intake and reduced sodium in mitigating stone formation. Dr. Pearle's perspective underscores the potential of lifestyle modifications as accessible and effective measures to reduce the risk of recurrent kidney stones.
+                              </p>
+                           </div>
+                           <div class="ksd-researcher-details col-md-3">
+                              <img src="{% static "images/ksd_researcher_2.jpg" %}" alt="" srcset="">
+                              <p>Dr. Margaret S. Pearle</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ksd-researcher-point-individual">
+                        <div class="row">
+                           <div class="ksd-researcher-point-text col-md-8">
+                              <p>
+                                 An expert in metabolic nephrolithiasis, highlights the significance of understanding metabolic abnormalities leading to kidney stone development. His perspective underscores the need for tailored treatment strategies based on individual metabolic profiles. Dr. Goldfarb's research contributes to the evolving field of personalized medicine in kidney stone management.
+                              </p>
+                           </div>
+                           <div class="ksd-researcher-details col-md-3">
+                              <img src="{% static "images/ksd_researcher_3.jpg" %}" alt="" srcset="">
+                              <p>Dr. David S. Goldfarb</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ksd-researcher-point-individual">
+                        <div class="row">
+                           <div class="ksd-researcher-point-text col-md-8">
+                              <p>
+                                 A renowned endourologist, advocates for minimally invasive techniques in kidney stone treatment. His perspective emphasizes the use of advanced procedures like shock wave lithotripsy and ureteroscopy, offering effective and patient-friendly alternatives to traditional surgical interventions. Dr. Lingeman's focus on innovative approaches contributes to improving the overall experience and outcomes for individuals dealing with kidney stones.
+                              </p>
+                           </div>
+                           <div class="ksd-researcher-details col-md-3">
+                              <img src="{% static "images/ksd_researcher_4.jpg" %}" alt="" srcset="">
+                              <p>Dr. James E. Lingeman</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="machine-learning-work-wrapper">
+               <h2 class="machine-learning-work-title ksd-title" data-aos="fade-up">
+                  How Machine Learning Works for KSD?
+               </h2>
+               <div class="machine-learning-work-content">
+                  <p data-aos="fade-up">
+                     Machine learning operates as a sophisticated analytical tool, leveraging a diverse set of features such as gravity, pH, osmolality, conductivity, urea, and calcium levels. The algorithm is trained on a dataset containing information about individuals with and without kidney stones, learning patterns and correlations within these parameters. As users input their data into the web application, the machine learning model employs this acquired knowledge to analyze the provided information. By comparing the user's data to patterns identified during the training phase, the algorithm can make predictions about the likelihood of kidney stone formation. This data-driven approach enables the web application to deliver personalized insights, allowing individuals to proactively monitor their kidney health and take preventive measures. The continuous learning capability of machine learning ensures that the system evolves with additional data, enhancing its accuracy and effectiveness over time.
+                  </p>
+                  <div class="machine-learning-work-image" data-aos="fade-up">
+                     <img src="{% static "images/machine_learning_work.jpg" %}" class="tect-center" alt="">
+                  </div>
+               </div>
+            </section>
+            <section class="ksd-video-info-wrapper">
+               <h2 class="ksd-info-title ksd-title" data-aos="fade-up">
+                  Treatment and Prevention of Kidney Stones
+               </h2>
+               <div class="ksd-info-text" data-aos="fade-up">
+                  <p>
+                     The treatment and prevention of kidney stones involve a multifaceted approach aimed at addressing both immediate concerns and minimizing the risk of recurrence. Treatment strategies often include hydration, pain management, and, in some cases, medical intervention or surgical procedures to alleviate symptoms and remove stones. Additionally, a crucial aspect of managing kidney stones involves preventive measures. These may encompass dietary adjustments, increased fluid intake, and lifestyle modifications tailored to an individual's specific risk factors. By adopting a proactive approach to kidney health, individuals can reduce the likelihood of stone formation and enhance their overall well-being. Regular monitoring, informed by personalized insights, becomes key in maintaining optimal kidney function and preventing the reoccurrence of kidney stones.
+                  </p>
+               </div>
+               <div class="ksd-info-video" data-aos="fade-left">
+                  <iframe width="350" height="315" src="https://www.youtube.com/embed/C1SY08PSjo0?si=PR0kut_Nod_oX9LT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               </div>
+            </section>
+            <section class="ksd-usps-wrapper">
+               <div class="row">
+                  <div class="ksd-usp-individual col-md-4" data-aos="fade-left">
+                     <h4 class="ksd-usp-title">
+                        Cutting-Edge Machine Learning Detection
+                     </h4>
+                     <p class="ksd-usp-text">
+                        Our web application stands out with state-of-the-art machine learning algorithms, offering unparalleled accuracy in early detection of kidney stones by analyzing essential urinary parameters.
+                     </p>
+                  </div>
+                  <div class="ksd-usp-individual col-md-4" data-aos="fade-left">
+                     <h4 class="ksd-usp-title">
+                        Dynamic Data-Driven Insights
+                     </h4>
+                     <p class="ksd-usp-text">
+                        Embrace a dynamic approach to kidney health with our web application, constantly evolving through machine learning. Receive real-time, data-driven insights that adapt to your unique health profile, ensuring the most relevant and up-to-date information for proactive well-being.
+                     </p>
+                  </div>
+                  <div class="ksd-usp-individual col-md-4" data-aos="fade-left">
+                     <h4 class="ksd-usp-title">
+                        User-Friendly Interface for Seamless Monitoring
+                     </h4>
+                     <p class="ksd-usp-text">
+                        With an intuitive design, our web application provides a hassle-free experience for users to monitor their kidney health effortlessly, facilitating easy data input and retrieval of personalized insights.
+                     </p>
+                  </div>
+               </div>
+            </section>
+        </div>
+   </div> 
+{% endblock  %}
